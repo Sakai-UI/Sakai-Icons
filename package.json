@@ -1,0 +1,87 @@
+{
+  "name": "sakai-icons",
+  "displayName": "Sakai Icons",
+  "description": "A simple file icon theme for VS Code",
+  "version": "0.0.16",
+  "publisher": "Sakai",
+  "icon": "sakai.png",
+  "preview": true,
+  "main": "./src/extension.js",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "keywords": [
+    "icons",
+    "theme",
+    "icon-theme",
+    "file-icon-theme",
+    "file icons"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sakai-UI/sakai-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sakai-UI/sakai-icons/issues"
+  },
+  "author": {
+    "name": "Pablo Severino"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "sakai",
+        "label": "Sakai Icons",
+        "path": "./src/sakai-icons.modified.json",
+        "_watch": true
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Sakai Icons",
+      "properties": {
+        "sakai-icons.hidesExplorerArrows": {
+          "type": "boolean",
+          "default": false,
+          "description": "Hide arrow icons in the explorer section."
+        },
+        "sakai-icons.folders.associations": {
+          "type": "object",
+          "default": {},
+          "description": "With this configuration can customize the folder icons."
+        },
+        "sakai-icons.files.associations": {
+          "type": "object",
+          "default": {},
+          "description": "With this configuration can customize the files icons."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "release-it": "^15.3.0"
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
+  }
+}

@@ -1,0 +1,8 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+src/sakai-icons.modified.json
+src/sakai-icons.bkp.json
+.DS_Store
