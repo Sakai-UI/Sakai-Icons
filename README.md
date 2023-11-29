@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="sakai.png" width="140" />
+<img src="sakai.png" width="80" />
 
 <h1>Sakai Icons</h1>
 
