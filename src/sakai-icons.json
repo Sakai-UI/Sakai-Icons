@@ -1051,8 +1051,8 @@
     "swift": {
       "iconPath": "./icons/files/swift.svg"
     },
-    "react_ts": {
-      "iconPath": "./icons/files/react_ts.svg"
+    "react-ts": {
+      "iconPath": "./icons/files/react-ts.svg"
     },
     "search": {
       "iconPath": "./icons/files/search.svg"
@@ -3013,6 +3013,10 @@
     "_sass": "folder-sass",
     "scss": "folder-sass",
     "_scss": "folder-sass",
+    "_preview": "folder-images",
+    "preview": "folder-images",
+    "_previews": "folder-images",
+    "previews": "folder-images",
     "_images": "folder-images",
     "_image": "folder-images",
     "_imgs": "folder-images",
