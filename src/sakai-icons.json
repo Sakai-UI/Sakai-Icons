@@ -151,7 +151,7 @@
       "iconPath": "./icons/folders/folder-vscode.svg"
     },
     "folder-views": {
-      "iconPath": "./icons/folders/folder-views.svg"
+      "iconPath": "./icons/folders/folder-red-code.svg"
     },
     "folder-vue": {
       "iconPath": "./icons/folders/folder-vue.svg"
@@ -3088,14 +3088,14 @@
     ".gitlab": "folder-gitlab",
     ".vscode": "folder-vscode",
     ".vscode-test": "folder-vscode",
-    "view": "folder-views",
-    "views": "folder-views",
-    "screen": "folder-views",
-    "screens": "folder-views",
-    "page": "folder-views",
-    "pages": "folder-views",
-    "public_html": "folder-views",
-    "html": "folder-views",
+    "view": "folder-red-code",
+    "views": "folder-red-code",
+    "screen": "folder-app",
+    "screens": "folder-app",
+    "page": "folder-app",
+    "pages": "folder-app",
+    "public_html": "folder-red-code",
+    "html": "folder-red-code",
     "vue": "folder-vue",
     ".vuepress": "folder-vuepress",
     ".expo": "folder-expo",
