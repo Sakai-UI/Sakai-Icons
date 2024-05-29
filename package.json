@@ -2,7 +2,7 @@
   "name": "sakai-icons",
   "displayName": "Sakai Icons",
   "description": "A simple file icon theme for VS Code",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "publisher": "Sakai",
   "icon": "sakai.png",
   "preview": true,

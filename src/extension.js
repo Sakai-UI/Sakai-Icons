@@ -1,9 +1,7 @@
 const vscode = require("vscode");
 const { monitorConfigChanges } = require("./lib/change-listener");
 const { syncOriginal } = require("./lib/theme");
-const {
-  log
-} = require("./lib/log")
+const { log } = require("./lib/log");
 /**
  * @param {vscode.ExtensionContext} context
  */
