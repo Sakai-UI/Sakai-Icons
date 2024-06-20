@@ -1,8 +1,7 @@
-out
-dist
-node_modules
-.vscode-test/
 *.vsix
-src/sakai-icons.modified.json
-src/sakai-icons.bkp.json
+node_modules
+yarn-error.log
+out/
+images/.DS_Store
 .DS_Store
+package-lock.json

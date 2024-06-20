@@ -1,14 +1,14 @@
 {
   "name": "sakai-icons",
   "displayName": "Sakai Icons",
-  "description": "A simple file icon theme for VS Code",
+  "description": "A Icons Theme for Visual Studio Code.",
   "version": "0.0.19",
   "publisher": "Sakai",
-  "icon": "sakai.png",
+  "icon": "logo.png",
   "preview": true,
-  "main": "./src/extension.js",
+  "main": "./out/src/extension",
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^1.5.0"
   },
   "categories": [
     "Themes"
@@ -19,10 +19,7 @@
   ],
   "keywords": [
     "icons",
-    "theme",
-    "icon-theme",
-    "file-icon-theme",
-    "file icons"
+    "sakai"
   ],
   "repository": {
     "type": "git",
@@ -46,42 +43,59 @@
   "contributes": {
     "iconThemes": [
       {
-        "id": "sakai",
-        "label": "Sakai Icons",
-        "path": "./src/sakai-icons.modified.json",
-        "_watch": true
+        "id": "sakai-icons",
+        "label": "Sakai Icons (No Folders Expanded)",
+        "path": "./src/sakai-icons.json"
+      },
+      {
+        "id": "sakai-icons-expanded",
+        "label": "Sakai Icons (Folders Expanded)",
+        "path": "./src/sakai-icons-expanded.json"
+      },
+      {
+        "id": "sakai-icons-light",
+        "label": "Sakai Icons (Clear theme)",
+        "path": "./src/sakai-icons-light.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "sakai-icons.hidesExplorerArrows",
+        "title": "Sakai Icons: Toggle Folder Arrows"
       }
     ],
     "configuration": {
-      "type": "object",
-      "title": "Sakai Icons",
+      "title": "%displayName%",
       "properties": {
         "sakai-icons.hidesExplorerArrows": {
           "type": "boolean",
           "default": false,
-          "description": "Hide arrow icons in the explorer section."
-        },
-        "sakai-icons.folders.associations": {
-          "type": "object",
-          "default": {},
-          "description": "With this configuration can customize the folder icons."
-        },
-        "sakai-icons.files.associations": {
-          "type": "object",
-          "default": {},
-          "description": "With this configuration can customize the files icons."
+          "description": "%configuration.hidesExplorerArrows%",
+          "scope": "window"
         }
       }
     }
   },
   "scripts": {
-    "release": "release-it"
+    "vscode:prepublish": "npm run build",
+    "prebuild": "npm run lint && npm run clean",
+    "build": "npm run compile",
+    "compile": "tsc -p ./",
+    "clean": "rimraf ./out",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "lint": "tslint -c tslint.json ./src/**/*.ts"
   },
   "devDependencies": {
-    "@types/vscode": "^1.70.0",
-    "release-it": "^15.3.0"
+    "@types/node": "^10.7.1",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1",
+    "vscode": "^1.1.21"
   },
   "dependencies": {
-    "vsce": "^2.15.0"
+    "bluebird": "^3.5.1",
+    "lodash.merge": "^4.6.2",
+    "semver": "^5.5.1"
   }
 }

@@ -1,0 +1,5 @@
+{
+  "displayName": "Sakai Icons",
+  "description": "The Sakai Icons theme is a beautiful icon theme for Visual Studio Code.",
+  "configuration.hidesExplorerArrows": "Hide explorer arrows before folder."
+}
