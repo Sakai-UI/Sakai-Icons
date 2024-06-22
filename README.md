@@ -6,11 +6,11 @@
 
 <h4>A Icons Theme for Visual Studio Code</h4>
 
-![Viewing the extension and its folder options](preview/preview.gif)
+![Viewing the extension and its folder options](images/preview.gif)
 </div>
 
 Pick your favorite theme and have fun! 🎉
-![Options of icons](preview/icon_theme.png)
+![Options of icons](images/icon_theme.png)
 
 
 _Note: For file names, you can use `*` to match all files with a specific file extension._

@@ -2,100 +2,56 @@
   "name": "sakai-icons",
   "displayName": "Sakai Icons",
   "description": "A Icons Theme for Visual Studio Code.",
-  "version": "0.0.19",
   "publisher": "Sakai",
   "icon": "logo.png",
-  "preview": true,
-  "main": "./out/src/extension",
+  "author": {
+    "name": "Pablo Severino",
+    "email": "pabloseverino40@gmail.com"
+  },
+  "version": "0.0.19",
   "engines": {
-    "vscode": "^1.5.0"
+    "vscode": "^1.60.0"
   },
   "categories": [
     "Themes"
   ],
+  "scripts": {
+    "build": "vsce package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sakai-UI/Sakai-Icons"
+  },
+  "bugs": {
+    "url": "https://github.com/Sakai-UI/Sakai-Icons/issues"
+  },
+  "license": "MIT",
   "extensionKind": [
     "ui",
     "workspace"
   ],
   "keywords": [
     "icons",
-    "sakai"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Sakai-UI/sakai-icons.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Sakai-UI/sakai-icons/issues"
-  },
-  "author": {
-    "name": "Pablo Severino"
-  },
-  "capabilities": {
-    "untrustedWorkspaces": {
-      "supported": true
-    },
-    "virtualWorkspaces": true
-  },
-  "activationEvents": [
-    "onStartupFinished"
+    "icon-theme",
+    "theme"
   ],
   "contributes": {
     "iconThemes": [
       {
-        "id": "sakai-icons",
-        "label": "Sakai Icons (No Folders Expanded)",
-        "path": "./src/sakai-icons.json"
+        "id": "sakai-icons-light",
+        "label": "Sakai Icons (Black & White)",
+        "path": "./themes/sakai-icons-light.json"
       },
       {
         "id": "sakai-icons-expanded",
         "label": "Sakai Icons (Folders Expanded)",
-        "path": "./src/sakai-icons-expanded.json"
+        "path": "./themes/sakai-icons-expanded.json"
       },
       {
-        "id": "sakai-icons-light",
-        "label": "Sakai Icons (Clear theme)",
-        "path": "./src/sakai-icons-light.json"
+        "id": "sakai-icons",
+        "label": "Sakai Icons (No Folders Expanded)",
+        "path": "./themes/sakai-icons.json"
       }
-    ],
-    "commands": [
-      {
-        "command": "sakai-icons.hidesExplorerArrows",
-        "title": "Sakai Icons: Toggle Folder Arrows"
-      }
-    ],
-    "configuration": {
-      "title": "%displayName%",
-      "properties": {
-        "sakai-icons.hidesExplorerArrows": {
-          "type": "boolean",
-          "default": false,
-          "description": "%configuration.hidesExplorerArrows%",
-          "scope": "window"
-        }
-      }
-    }
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run build",
-    "prebuild": "npm run lint && npm run clean",
-    "build": "npm run compile",
-    "compile": "tsc -p ./",
-    "clean": "rimraf ./out",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "lint": "tslint -c tslint.json ./src/**/*.ts"
-  },
-  "devDependencies": {
-    "@types/node": "^10.7.1",
-    "rimraf": "^2.6.2",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1",
-    "vscode": "^1.1.21"
-  },
-  "dependencies": {
-    "bluebird": "^3.5.1",
-    "lodash.merge": "^4.6.2",
-    "semver": "^5.5.1"
+    ]
   }
 }

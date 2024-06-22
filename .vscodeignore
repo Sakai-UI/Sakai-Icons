@@ -1,8 +1,4 @@
-.gitignore
 .vscode/**
-src/**
-tsconfig.json
-tslint.json
-package-lock.json
-yarn.lock
-**/*.map
+.vscode-test/**
+.gitignore
+vsc-extension-quickstart.md
